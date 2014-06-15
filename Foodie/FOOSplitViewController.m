@@ -18,20 +18,27 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self setUpContentViewControllers];
+    
+    menuVisible = YES;
+    
+}
+
+- (void)setUpContentViewControllers {
+    
+    // Get all child view controllers and find our two interesting onses
     NSArray *childViewControllers = [self childViewControllers];
     int count = [childViewControllers count];
     for (int n = 0; n < count; n++) {
         if ([[childViewControllers objectAtIndex:n] isKindOfClass:[FOORecipeViewController class]]) {
             recipeViewController = childViewControllers[n];
+            // menuViewController = ...
         }
     }
     
     [recipeViewController setDelegate:self];
-    
-    menuVisible = YES;
-    
-    // Try to resize the left view
-    }
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -48,47 +55,22 @@
 
 -(void)setMenuVisible:(bool)visible {
     
-    NSString *visualConstraint;
-    if (visible) {
-        visualConstraint = @"|-(0)-[leftViewController]";
-    } else if (visible == false) {
-        visualConstraint = @"|-(-253)-[leftViewController]";
-    }
-    
-    NSDictionary *viewsDictionary =
-        NSDictionaryOfVariableBindings(leftViewController);
-    
-    NSArray *constraints =
-        [NSLayoutConstraint constraintsWithVisualFormat:visualConstraint
-                                                options:0 metrics:nil views:viewsDictionary];
-    
     NSArray *activeConstraints = [[self view] constraints];
     int count = [activeConstraints count];
     for (int n = 0; n < count; n++) {
         if([activeConstraints[n] isKindOfClass:[NSLayoutConstraint class]]) {
             
-            //if(activeConstraints[n] fir) {
-                NSLog(@"%i - %i", [[activeConstraints[n] firstItem] tag], [[activeConstraints[n] secondItem] tag]);
-                NSLog(@"%i - %i", [activeConstraints[n] firstAttribute] , [activeConstraints[n] secondAttribute]);
-                NSLog(@"%f", [activeConstraints[n] constant]);
-                
-            //}
-            
-            if([[activeConstraints[n] firstItem] tag] == 2001 &&
-               [[activeConstraints[n] secondItem] tag] == 0 &&
-               [activeConstraints[n] firstAttribute] == 5 &&
+            if([[activeConstraints[n] firstItem] tag] == 2001 &&    // First item if our left content view
+               [[activeConstraints[n] secondItem] tag] == 0 &&      // Second item is the "superview"
+               [activeConstraints[n] firstAttribute] == 5 &&        // Both attrubutes should be: NSLayoutAttributeLeading
                [activeConstraints[n] secondAttribute] == 5) {
-                NSLog(@"Found it!");
                 
-                NSLayoutConstraint *positionConstraint = (NSLayoutConstraint *)activeConstraints[n];
-                
-                [positionConstraint setConstant: (visible) ? 0 : -253 ];
+                [activeConstraints[n] setConstant: (visible) ? 0 : -253 ]; // Set the found constraints constant depending on visibility input
             }
             
         }
     }
-    
-    //[[self view] addConstraints:constraints];
+
 }
 
 
