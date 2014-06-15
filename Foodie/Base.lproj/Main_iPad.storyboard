@@ -99,9 +99,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-ns-eXJ">
-                                <rect key="frame" x="234" y="465" width="75" height="30"/>
+                                <rect key="frame" x="214" y="465" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Hide menu">
+                                <state key="normal" title="Toggle meny">
                                     <color key="titleColor" red="0.99497976539641386" green="0.98252254339256928" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -109,9 +109,29 @@
                                     <action selector="toggleMenuButtonPressed:" destination="mNI-oi-5UC" eventType="touchUpInside" id="v49-yr-oqI"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dq1-d3-whw">
+                                <rect key="frame" x="0.0" y="331" width="89" height="297"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="k6N-f1-kl1"/>
+                                    <constraint firstAttribute="height" constant="297" id="nlh-SU-jiT"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mini menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMf-iM-eCs">
+                                <rect key="frame" x="4" y="470" width="80" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.3986770946370698" blue="0.3413732782101897" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="IMf-iM-eCs" firstAttribute="leading" secondItem="6qB-Vu-WSO" secondAttribute="leading" constant="4" id="0fT-SH-uxo"/>
+                            <constraint firstAttribute="centerY" secondItem="IMf-iM-eCs" secondAttribute="centerY" id="EhW-og-di1"/>
+                            <constraint firstAttribute="centerY" secondItem="Dq1-d3-whw" secondAttribute="centerY" id="I22-ls-oUT"/>
+                            <constraint firstItem="Dq1-d3-whw" firstAttribute="leading" secondItem="6qB-Vu-WSO" secondAttribute="leading" id="Qgr-ec-WHw"/>
                             <constraint firstItem="s9Q-kg-tiY" firstAttribute="top" secondItem="5Uo-ns-eXJ" secondAttribute="bottom" id="mlb-qe-rtp"/>
                             <constraint firstAttribute="centerX" secondItem="5Uo-ns-eXJ" secondAttribute="centerX" id="nZc-0j-V4D"/>
                             <constraint firstAttribute="centerY" secondItem="5Uo-ns-eXJ" secondAttribute="centerY" id="wKE-ZO-uTS"/>
