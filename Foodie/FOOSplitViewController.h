@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FOOSplitViewController : UIViewController
+@interface FOOSplitViewController : UIViewController {
+
+    IBOutlet UIView* leftViewController;
+    IBOutlet UIView* rightViewController;
+}
 
 @end

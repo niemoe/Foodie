@@ -18,6 +18,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Try to resize the left view
+    NSDictionary *viewsDictionary =
+    NSDictionaryOfVariableBindings(leftViewController);
+    
+    NSArray *constraints =
+    [NSLayoutConstraint constraintsWithVisualFormat:@"|-(-253)-[leftViewController]"
+                                            options:0 metrics:nil views:viewsDictionary];
+    
+    [[self view] addConstraints:constraints];
 }
 
 - (void)didReceiveMemoryWarning
