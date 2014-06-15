@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3988C6194DB366002234D8 /* FOORecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3988C5194DB366002234D8 /* FOORecipeViewController.m */; };
 		4CBF7AB9194D90A6001A59AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF7AB8194D90A6001A59AE /* Foundation.framework */; };
 		4CBF7ABB194D90A6001A59AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF7ABA194D90A6001A59AE /* CoreGraphics.framework */; };
 		4CBF7ABD194D90A6001A59AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF7ABC194D90A6001A59AE /* UIKit.framework */; };
@@ -15,13 +16,14 @@
 		4CBF7AC9194D90A6001A59AE /* FOOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF7AC8194D90A6001A59AE /* FOOAppDelegate.m */; };
 		4CBF7ACC194D90A6001A59AE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBF7ACA194D90A6001A59AE /* Main_iPhone.storyboard */; };
 		4CBF7ACF194D90A6001A59AE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBF7ACD194D90A6001A59AE /* Main_iPad.storyboard */; };
-		4CBF7AD2194D90A6001A59AE /* FOOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF7AD1194D90A6001A59AE /* FOOViewController.m */; };
+		4CBF7AD2194D90A6001A59AE /* FOOSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF7AD1194D90A6001A59AE /* FOOSplitViewController.m */; };
 		4CBF7AD4194D90A6001A59AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBF7AD3194D90A6001A59AE /* Images.xcassets */; };
 		4CBF7ADB194D90A6001A59AE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF7ADA194D90A6001A59AE /* XCTest.framework */; };
 		4CBF7ADC194D90A6001A59AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF7AB8194D90A6001A59AE /* Foundation.framework */; };
 		4CBF7ADD194D90A6001A59AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBF7ABC194D90A6001A59AE /* UIKit.framework */; };
 		4CBF7AE5194D90A6001A59AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CBF7AE3194D90A6001A59AE /* InfoPlist.strings */; };
 		4CBF7AE7194D90A6001A59AE /* FoodieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF7AE6194D90A6001A59AE /* FoodieTests.m */; };
+		4CBF7AF2194D960E001A59AE /* FOORootNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF7AF1194D960E001A59AE /* FOORootNavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C3988C4194DB366002234D8 /* FOORecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOORecipeViewController.h; sourceTree = "<group>"; };
+		4C3988C5194DB366002234D8 /* FOORecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOORecipeViewController.m; sourceTree = "<group>"; };
 		4CBF7AB5194D90A6001A59AE /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBF7AB8194D90A6001A59AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CBF7ABA194D90A6001A59AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,14 +51,16 @@
 		4CBF7AC8194D90A6001A59AE /* FOOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FOOAppDelegate.m; sourceTree = "<group>"; };
 		4CBF7ACB194D90A6001A59AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4CBF7ACE194D90A6001A59AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		4CBF7AD0194D90A6001A59AE /* FOOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FOOViewController.h; sourceTree = "<group>"; };
-		4CBF7AD1194D90A6001A59AE /* FOOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FOOViewController.m; sourceTree = "<group>"; };
+		4CBF7AD0194D90A6001A59AE /* FOOSplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FOOSplitViewController.h; sourceTree = "<group>"; };
+		4CBF7AD1194D90A6001A59AE /* FOOSplitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FOOSplitViewController.m; sourceTree = "<group>"; };
 		4CBF7AD3194D90A6001A59AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4CBF7AD9194D90A6001A59AE /* FoodieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBF7ADA194D90A6001A59AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4CBF7AE2194D90A6001A59AE /* FoodieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoodieTests-Info.plist"; sourceTree = "<group>"; };
 		4CBF7AE4194D90A6001A59AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CBF7AE6194D90A6001A59AE /* FoodieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodieTests.m; sourceTree = "<group>"; };
+		4CBF7AF0194D960E001A59AE /* FOORootNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOORootNavController.h; sourceTree = "<group>"; };
+		4CBF7AF1194D960E001A59AE /* FOORootNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOORootNavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +124,12 @@
 				4CBF7AC8194D90A6001A59AE /* FOOAppDelegate.m */,
 				4CBF7ACA194D90A6001A59AE /* Main_iPhone.storyboard */,
 				4CBF7ACD194D90A6001A59AE /* Main_iPad.storyboard */,
-				4CBF7AD0194D90A6001A59AE /* FOOViewController.h */,
-				4CBF7AD1194D90A6001A59AE /* FOOViewController.m */,
+				4CBF7AF0194D960E001A59AE /* FOORootNavController.h */,
+				4CBF7AF1194D960E001A59AE /* FOORootNavController.m */,
+				4C3988C4194DB366002234D8 /* FOORecipeViewController.h */,
+				4C3988C5194DB366002234D8 /* FOORecipeViewController.m */,
+				4CBF7AD0194D90A6001A59AE /* FOOSplitViewController.h */,
+				4CBF7AD1194D90A6001A59AE /* FOOSplitViewController.m */,
 				4CBF7AD3194D90A6001A59AE /* Images.xcassets */,
 				4CBF7ABF194D90A6001A59AE /* Supporting Files */,
 			);
@@ -254,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CBF7AD2194D90A6001A59AE /* FOOViewController.m in Sources */,
+				4CBF7AD2194D90A6001A59AE /* FOOSplitViewController.m in Sources */,
 				4CBF7AC5194D90A6001A59AE /* main.m in Sources */,
+				4CBF7AF2194D960E001A59AE /* FOORootNavController.m in Sources */,
+				4C3988C6194DB366002234D8 /* FOORecipeViewController.m in Sources */,
 				4CBF7AC9194D90A6001A59AE /* FOOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +483,7 @@
 				4CBF7AEC194D90A6001A59AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CBF7AED194D90A6001A59AE /* Build configuration list for PBXNativeTarget "FoodieTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +492,7 @@
 				4CBF7AEF194D90A6001A59AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
