@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="691" y="-490"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe View Controller-->
         <scene sceneID="ilr-PS-gd2">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="mNI-oi-5UC" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="mNI-oi-5UC" customClass="FOORecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DEi-Ob-U9I"/>
                         <viewControllerLayoutGuide type="bottom" id="s9Q-kg-tiY"/>
@@ -98,17 +98,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="515" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-ns-eXJ">
-                                <rect key="frame" x="234" y="930" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-ns-eXJ">
+                                <rect key="frame" x="234" y="465" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleMenuButtonPressed:" destination="mNI-oi-5UC" eventType="touchUpInside" id="v49-yr-oqI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.3986770946370698" blue="0.3413732782101897" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="s9Q-kg-tiY" firstAttribute="top" secondItem="5Uo-ns-eXJ" secondAttribute="bottom" id="mlb-qe-rtp"/>
+                            <constraint firstAttribute="centerX" secondItem="5Uo-ns-eXJ" secondAttribute="centerX" id="nZc-0j-V4D"/>
+                            <constraint firstAttribute="centerY" secondItem="5Uo-ns-eXJ" secondAttribute="centerY" id="wKE-ZO-uTS"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -129,8 +134,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Menu view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-aj-fYB">
-                                <rect key="frame" x="89" y="939" width="83" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Menu view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-aj-fYB">
+                                <rect key="frame" x="84" y="469" width="83" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -139,6 +144,8 @@
                         <color key="backgroundColor" red="0.88707682935039511" green="1" blue="0.21523981801433933" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2hD-J7-3NP" firstAttribute="top" secondItem="dlz-aj-fYB" secondAttribute="bottom" id="0dD-ZD-mZb"/>
+                            <constraint firstAttribute="centerX" secondItem="dlz-aj-fYB" secondAttribute="centerX" id="ZlI-wK-ZXa"/>
+                            <constraint firstAttribute="centerY" secondItem="dlz-aj-fYB" secondAttribute="centerY" id="lDS-Yq-yH1"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

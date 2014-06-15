@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FOOSplitViewController : UIViewController {
+#import "FOORecipeViewController.h"
 
+@class FOORecipeViewController;
+
+@interface FOOSplitViewController : UIViewController <MenuToggleActionDelegate> {
+
+    BOOL menuVisible;
+    
     IBOutlet UIView* leftViewController;
     IBOutlet UIView* rightViewController;
+    
+    UIViewController *menuViewController;
+    FOORecipeViewController *recipeViewController;
 }
 
 @end
