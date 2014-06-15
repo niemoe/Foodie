@@ -62,7 +62,33 @@
         [NSLayoutConstraint constraintsWithVisualFormat:visualConstraint
                                                 options:0 metrics:nil views:viewsDictionary];
     
-    [[self view] addConstraints:constraints];
+    NSArray *activeConstraints = [[self view] constraints];
+    int count = [activeConstraints count];
+    for (int n = 0; n < count; n++) {
+        if([activeConstraints[n] isKindOfClass:[NSLayoutConstraint class]]) {
+            
+            //if(activeConstraints[n] fir) {
+                NSLog(@"%i - %i", [[activeConstraints[n] firstItem] tag], [[activeConstraints[n] secondItem] tag]);
+                NSLog(@"%i - %i", [activeConstraints[n] firstAttribute] , [activeConstraints[n] secondAttribute]);
+                NSLog(@"%f", [activeConstraints[n] constant]);
+                
+            //}
+            
+            if([[activeConstraints[n] firstItem] tag] == 2001 &&
+               [[activeConstraints[n] secondItem] tag] == 0 &&
+               [activeConstraints[n] firstAttribute] == 5 &&
+               [activeConstraints[n] secondAttribute] == 5) {
+                NSLog(@"Found it!");
+                
+                NSLayoutConstraint *positionConstraint = (NSLayoutConstraint *)activeConstraints[n];
+                
+                [positionConstraint setConstant: (visible) ? 0 : -253 ];
+            }
+            
+        }
+    }
+    
+    //[[self view] addConstraints:constraints];
 }
 
 
